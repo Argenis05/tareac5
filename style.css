@@ -1,0 +1,23 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+}
+
+.mensaje {
+    font-size: 48px;
+    color: #ff69b4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.mensaje:hover {
+    transform: scale(1.1);
+}
+ img {
+    border: 2px solid black;
+}
