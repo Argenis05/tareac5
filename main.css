@@ -1,0 +1,59 @@
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr; /* Para mobile: 1 columna */
+    gap: 10px; /* Espaciado entre imágenes */
+}
+
+#container img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+/* Breakpoint para tablet */
+@media (min-width: 641px) and (max-width: 940px) {
+    #container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablet */
+    }
+}
+
+/* Breakpoint para desktop */
+@media (min-width: 941px) {
+    #container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+    }
+}
+ 
+
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las imágenes */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#gallery-item {
+    flex: 1 1 100%; /* Por defecto, ocupa el 100% en móviles */
+    margin: 5px;
+}
+
+#gallery-item img {
+    width: 100%; /* Hace que las imágenes se ajusten al contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Media Queries para tablets */
+@media (min-width: 641px) and (max-width: 940px) {
+    #gallery-item {
+        flex: 1 1 calc(33.33% - 10px); /* 3 imágenes por fila en tablets */
+    }
+}
+
+/* Media Queries para desktop */
+@media (min-width: 941px) {
+    #gallery-item {
+        flex: 1 1 calc(25% - 10px); /* 4 imágenes por fila en desktop */
+    }
+}
